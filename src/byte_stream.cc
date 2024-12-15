@@ -2,7 +2,11 @@
 
 using namespace std;
 
-ByteStream::ByteStream( uint64_t capacity ) : capacity_( capacity ) {}
+ByteStream::ByteStream( uint64_t capacity ) :
+  capacity_( capacity ),
+  buffer_( std::vector<uint8_t>(capacity) ),
+  start_( 0 ),
+  end_( 0 ) {}
 
 bool Writer::is_closed() const
 {
