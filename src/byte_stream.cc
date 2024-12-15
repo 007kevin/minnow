@@ -25,7 +25,7 @@ void Writer::close()
 uint64_t Writer::available_capacity() const
 {
   // Your code here.
-  return {};
+  return capacity_;
 }
 
 uint64_t Writer::bytes_pushed() const
